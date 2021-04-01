@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <StatDef>
+    <defName>ZzZomboRW_GunWithMagazines_CurrentAmmo</defName>
+    <label>loaded ammo</label>
+    <description>How much ammo is loaded into this weapon currently.</description>
+    <workerClass>ZzZomboRW.StatWorker_CurrentAmmo</workerClass>
+    <category>Weapon</category>
+    <defaultBaseValue>0</defaultBaseValue>
+    <minValue>0</minValue>
+    <toStringStyle>Integer</toStringStyle>
+    <formatString>{0}</formatString>
+    <showIfUndefined>false</showIfUndefined>
+    <showZeroBaseValue>false</showZeroBaseValue>
+    <displayPriorityInCategory>5104</displayPriorityInCategory>
+    <scenarioRandomizable>false</scenarioRandomizable>
+  </StatDef>
+  <StatDef>
+    <defName>ZzZomboRW_GunWithMagazines_MaxAmmo</defName>
+    <label>magazine capacity</label>
+    <description>How much ammo can be loaded into this weapon at once.</description>
+    <category>Weapon</category>
+    <defaultBaseValue>1</defaultBaseValue>
+    <minValue>-1</minValue>
+    <toStringStyle>Integer</toStringStyle>
+    <formatString>{0}</formatString>
+    <showIfUndefined>false</showIfUndefined>
+    <showZeroBaseValue>false</showZeroBaseValue>
+    <displayPriorityInCategory>5105</displayPriorityInCategory>
+    <scenarioRandomizable>false</scenarioRandomizable>
+  </StatDef>
+</Defs>

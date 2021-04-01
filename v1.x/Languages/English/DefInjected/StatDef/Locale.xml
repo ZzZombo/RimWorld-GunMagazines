@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <ZzZomboRW_GunWithMagazines_CurrentAmmo.label>loaded ammo</ZzZomboRW_GunWithMagazines_CurrentAmmo.label>
+  <ZzZomboRW_GunWithMagazines_CurrentAmmo.description>How much ammo is loaded into this weapon currently.</ZzZomboRW_GunWithMagazines_CurrentAmmo.description>
+  <ZzZomboRW_GunWithMagazines_MaxAmmo.label>magazine capacity</ZzZomboRW_GunWithMagazines_MaxAmmo.label>
+  <ZzZomboRW_GunWithMagazines_MaxAmmo.description>How much ammo can be loaded into this weapon at once.</ZzZomboRW_GunWithMagazines_MaxAmmo.description>
+</LanguageData>
