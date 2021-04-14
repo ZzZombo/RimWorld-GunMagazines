@@ -11,9 +11,9 @@ namespace ZzZomboRW
 		public CompProperties_GunWithMagazines()
 		{
 			this.compClass = typeof(CompGunWithMagazines);
-			Log.Message($"[{this.GetType().FullName}] Initialized:\n" +
-				$"\tCurrent ammo: {this.currentAmmo};\n" +
-				$"\tEnabled: {this.enabled}.");
+			//Log.Message($"[{this.GetType().FullName}] Initialized:\n" +
+			//	$"\tCurrent ammo: {this.currentAmmo};\n" +
+			//	$"\tEnabled: {this.enabled}.");
 		}
 
 	}
@@ -33,14 +33,11 @@ namespace ZzZomboRW
 		public override void Initialize(CompProperties props)
 		{
 			base.Initialize(props);
-			if(this.CurrentAmmo < 0)
-			{
-				this.CurrentAmmo = this.MaxAmmo;
-			}
-			Log.Message($"[{this.GetType().FullName}] Initialized for {this.parent}:\n" +
-				$"\tCurrent ammo: {this.CurrentAmmo};\n" +
-				$"\tMax ammo: {this.MaxAmmo};\n" +
-				$"\tEnabled: {this.Props.enabled}.");
+			this.CurrentAmmo = this.MaxAmmo;
+			//Log.Message($"[{this.GetType().FullName}] Initialized for {this.parent}:\n" +
+			//	$"\tCurrent ammo: {this.CurrentAmmo};\n" +
+			//	$"\tMax ammo: {this.MaxAmmo};\n" +
+			//	$"\tEnabled: {this.Props.enabled}.");
 		}
 		public override void PostExposeData()
 		{
