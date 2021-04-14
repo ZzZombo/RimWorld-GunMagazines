@@ -15,7 +15,7 @@ namespace ZzZomboRW
 			if(req.HasThing)
 			{
 				var comp = req.Thing.TryGetComp<CompGunWithMagazines>();
-				if((comp?.Enabled ?? false) && comp.CurrentAmmo > 0)
+				if(comp?.Enabled is true && comp.CurrentAmmo > 0)
 				{
 					val = 0;
 				}
