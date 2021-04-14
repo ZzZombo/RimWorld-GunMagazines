@@ -15,8 +15,8 @@
 		<AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
 		<AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
 		<EnableNETAnalyzers>true</EnableNETAnalyzers>
-		<PackageProjectUrl>https://github.com/ZzZombo/RimWorld-Template</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/ZzZombo/RimWorld-Template</RepositoryUrl>
+		<PackageProjectUrl>https://github.com/ZzZombo/RimWorld-GunMagazines</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/ZzZombo/RimWorld-GunMagazines.git</RepositoryUrl>
 		<RepositoryType>Git</RepositoryType>
 	</PropertyGroup>
 	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
