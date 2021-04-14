@@ -31,7 +31,7 @@ namespace ZzZomboRW
 		[HarmonyPatch(typeof(Verb_Shoot), nameof(Verb_Shoot.TryCastShot))]
 		public static class Verb_Shoot_TryCastShotPatch
 		{
-			private static void Postfix(ref bool __result, Verb_Shoot __instance)
+			private static void Postfix(bool __result, Verb_Shoot __instance)
 			{
 				var comp = __instance.EquipmentSource?.GetComp<CompGunWithMagazines>();
 				if(__result && comp?.Enabled is true && comp.CurrentAmmo > 0)
