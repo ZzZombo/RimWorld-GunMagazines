@@ -1,91 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  <Operation Class="ZzZomboRW.PatchOperationAddNode">
-    <name>comps</name>
-    <xpath>/Defs/ThingDef[@ParentName="BaseHumanMakeableGun"]</xpath>
-    <value>
-      <li Class="ZzZomboRW.CompProperties_GunWithMagazines"/>
-    </value>
-  </Operation>
-  <Operation Class="ZzZomboRW.PatchOperationAddNode">
-    <name>statBases</name>
-    <xpath>/Defs/ThingDef[@ParentName="BaseHumanMakeableGun"]</xpath>
-    <value />
-  </Operation>
-  <Operation Class="ZzZomboRW.PatchOperationAddNode">
-    <name>parts</name>
-    <xpath>/Defs/StatDef[defName="RangedWeapon_Cooldown"]</xpath>
-    <value>
-      <li Class="ZzZomboRW.StatPart_RangedWeapon_Cooldown"/>
-    </value>
-  </Operation>
-  <Operation Class="ZzZomboRW.PatchOperationAddNode">
-    <xpath>/Defs/ThingDef[defName="Gun_Revolver"]/statBases</xpath>
-    <value>
-      <ZzZomboRW_GunWithMagazines_MaxAmmo>6</ZzZomboRW_GunWithMagazines_MaxAmmo>
-    </value>
-  </Operation>
-  <Operation Class="ZzZomboRW.PatchOperationAddNode">
-    <xpath>/Defs/ThingDef[defName="Gun_Autopistol"]/statBases</xpath>
-    <value>
-      <ZzZomboRW_GunWithMagazines_MaxAmmo>10</ZzZomboRW_GunWithMagazines_MaxAmmo>
-    </value>
-  </Operation>
-  <Operation Class="ZzZomboRW.PatchOperationAddNode">
-    <xpath>/Defs/ThingDef[defName="Gun_MachinePistol"]/statBases</xpath>
-    <value>
-      <ZzZomboRW_GunWithMagazines_MaxAmmo>15</ZzZomboRW_GunWithMagazines_MaxAmmo>
-    </value>
-  </Operation>
-  <Operation Class="ZzZomboRW.PatchOperationAddNode">
-    <xpath>/Defs/ThingDef[defName="Gun_HeavySMG"]/statBases</xpath>
-    <value>
-      <ZzZomboRW_GunWithMagazines_MaxAmmo>30</ZzZomboRW_GunWithMagazines_MaxAmmo>
-    </value>
-  </Operation>
-  <Operation Class="ZzZomboRW.PatchOperationAddNode">
-    <xpath>/Defs/ThingDef[defName="Gun_IncendiaryLauncher"]/statBases</xpath>
-    <value>
-      <ZzZomboRW_GunWithMagazines_MaxAmmo>25</ZzZomboRW_GunWithMagazines_MaxAmmo>
-    </value>
-  </Operation>
-  <Operation Class="ZzZomboRW.PatchOperationAddNode">
-    <xpath>/Defs/ThingDef[defName="Gun_PumpShotgun"]/statBases</xpath>
-    <value>
-      <ZzZomboRW_GunWithMagazines_MaxAmmo>7</ZzZomboRW_GunWithMagazines_MaxAmmo>
-    </value>
-  </Operation>
-  <Operation Class="ZzZomboRW.PatchOperationAddNode">
-    <xpath>/Defs/ThingDef[defName="Gun_ChainShotgun"]/statBases</xpath>
-    <value>
-      <ZzZomboRW_GunWithMagazines_MaxAmmo>7</ZzZomboRW_GunWithMagazines_MaxAmmo>
-    </value>
-  </Operation>
-  <Operation Class="ZzZomboRW.PatchOperationAddNode">
-    <xpath>/Defs/ThingDef[defName="Gun_LMG"]/statBases</xpath>
-    <value>
-      <ZzZomboRW_GunWithMagazines_MaxAmmo>200</ZzZomboRW_GunWithMagazines_MaxAmmo>
-    </value>
-  </Operation>
-  <Operation Class="ZzZomboRW.PatchOperationAddNode">
-    <xpath>/Defs/ThingDef[defName="Gun_AssaultRifle"]/statBases</xpath>
-    <value>
-      <ZzZomboRW_GunWithMagazines_MaxAmmo>35</ZzZomboRW_GunWithMagazines_MaxAmmo>
-    </value>
-  </Operation>
-  <Operation Class="ZzZomboRW.PatchOperationAddNode">
-    <xpath>/Defs/ThingDef[defName="Gun_SniperRifle"]/statBases</xpath>
-    <value>
-      <ZzZomboRW_GunWithMagazines_MaxAmmo>10</ZzZomboRW_GunWithMagazines_MaxAmmo>
-    </value>
-  </Operation>
-  <Operation Class="ZzZomboRW.PatchOperationAddNode">
-    <xpath>/Defs/ThingDef[defName="Gun_Minigun"]/statBases</xpath>
-    <value>
-      <ZzZomboRW_GunWithMagazines_MaxAmmo>300</ZzZomboRW_GunWithMagazines_MaxAmmo>
-    </value>
-  </Operation>
-  <!--<Operation Class="PatchOperationRemove">
+	<Operation Class="ZzZomboRW.PatchOperationAddNodeWithDefault">
+		<name>comps</name>
+		<xpath>/Defs/ThingDef[@ParentName="BaseHumanMakeableGun"]</xpath>
+		<value>
+			<li Class="ZzZomboRW.CompProperties_GunWithMagazines"/>
+		</value>
+	</Operation>
+	<Operation Class="ZzZomboRW.PatchOperationAddNodeWithDefault">
+		<name>statBases</name>
+		<xpath>/Defs/ThingDef[@ParentName="BaseHumanMakeableGun"]</xpath>
+		<value />
+	</Operation>
+	<Operation Class="ZzZomboRW.PatchOperationAddNodeWithDefault">
+		<name>parts</name>
+		<xpath>/Defs/StatDef[defName="RangedWeapon_Cooldown"]</xpath>
+		<value>
+			<li Class="ZzZomboRW.StatPart_RangedWeapon_Cooldown"/>
+		</value>
+	</Operation>
+	<Operation Class="ZzZomboRW.PatchOperationAddNodeWithDefault">
+		<xpath>/Defs/ThingDef[defName="Gun_Revolver"]/statBases</xpath>
+		<value>
+			<ZzZomboRW_GunWithMagazines_MaxAmmo>6</ZzZomboRW_GunWithMagazines_MaxAmmo>
+		</value>
+	</Operation>
+	<Operation Class="ZzZomboRW.PatchOperationAddNodeWithDefault">
+		<xpath>/Defs/ThingDef[defName="Gun_Autopistol"]/statBases</xpath>
+		<value>
+			<ZzZomboRW_GunWithMagazines_MaxAmmo>10</ZzZomboRW_GunWithMagazines_MaxAmmo>
+		</value>
+	</Operation>
+	<Operation Class="ZzZomboRW.PatchOperationAddNodeWithDefault">
+		<xpath>/Defs/ThingDef[defName="Gun_MachinePistol"]/statBases</xpath>
+		<value>
+			<ZzZomboRW_GunWithMagazines_MaxAmmo>15</ZzZomboRW_GunWithMagazines_MaxAmmo>
+		</value>
+	</Operation>
+	<Operation Class="ZzZomboRW.PatchOperationAddNodeWithDefault">
+		<xpath>/Defs/ThingDef[defName="Gun_HeavySMG"]/statBases</xpath>
+		<value>
+			<ZzZomboRW_GunWithMagazines_MaxAmmo>30</ZzZomboRW_GunWithMagazines_MaxAmmo>
+		</value>
+	</Operation>
+	<Operation Class="ZzZomboRW.PatchOperationAddNodeWithDefault">
+		<xpath>/Defs/ThingDef[defName="Gun_IncendiaryLauncher"]/statBases</xpath>
+		<value>
+			<ZzZomboRW_GunWithMagazines_MaxAmmo>25</ZzZomboRW_GunWithMagazines_MaxAmmo>
+		</value>
+	</Operation>
+	<Operation Class="ZzZomboRW.PatchOperationAddNodeWithDefault">
+		<xpath>/Defs/ThingDef[defName="Gun_PumpShotgun"]/statBases</xpath>
+		<value>
+			<ZzZomboRW_GunWithMagazines_MaxAmmo>7</ZzZomboRW_GunWithMagazines_MaxAmmo>
+		</value>
+	</Operation>
+	<Operation Class="ZzZomboRW.PatchOperationAddNodeWithDefault">
+		<xpath>/Defs/ThingDef[defName="Gun_ChainShotgun"]/statBases</xpath>
+		<value>
+			<ZzZomboRW_GunWithMagazines_MaxAmmo>7</ZzZomboRW_GunWithMagazines_MaxAmmo>
+		</value>
+	</Operation>
+	<Operation Class="ZzZomboRW.PatchOperationAddNodeWithDefault">
+		<xpath>/Defs/ThingDef[defName="Gun_LMG"]/statBases</xpath>
+		<value>
+			<ZzZomboRW_GunWithMagazines_MaxAmmo>200</ZzZomboRW_GunWithMagazines_MaxAmmo>
+		</value>
+	</Operation>
+	<Operation Class="ZzZomboRW.PatchOperationAddNodeWithDefault">
+		<xpath>/Defs/ThingDef[defName="Gun_AssaultRifle"]/statBases</xpath>
+		<value>
+			<ZzZomboRW_GunWithMagazines_MaxAmmo>35</ZzZomboRW_GunWithMagazines_MaxAmmo>
+		</value>
+	</Operation>
+	<Operation Class="ZzZomboRW.PatchOperationAddNodeWithDefault">
+		<xpath>/Defs/ThingDef[defName="Gun_SniperRifle"]/statBases</xpath>
+		<value>
+			<ZzZomboRW_GunWithMagazines_MaxAmmo>10</ZzZomboRW_GunWithMagazines_MaxAmmo>
+		</value>
+	</Operation>
+	<Operation Class="ZzZomboRW.PatchOperationAddNodeWithDefault">
+		<xpath>/Defs/ThingDef[defName="Gun_Minigun"]/statBases</xpath>
+		<value>
+			<ZzZomboRW_GunWithMagazines_MaxAmmo>300</ZzZomboRW_GunWithMagazines_MaxAmmo>
+		</value>
+	</Operation>
+	<!--<Operation Class="PatchOperationRemove">
     <xpath>/Defs/ThingDef[@ParentName="BaseHumanMakeableGun" and statBases/ZzZomboRW_GunWithMagazines_MaxAmmo>1]/verbs/li[verbClass="Verb_Shoot"]/burstShotCount</xpath>
   </Operation>-->
 </Patch>

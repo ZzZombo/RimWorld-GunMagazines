@@ -16,13 +16,11 @@ namespace ZzZomboRW
 		{
 			if(req.HasThing)
 			{
-				var v = val;
 				var comp = req.Thing.TryGetComp<CompGunWithMagazines>();
 				if((comp?.Enabled ?? false) && comp.CurrentAmmo > 0)
 				{
 					val = 0;
 				}
-				// Log.Message($"{comp?.parent}: {comp?.CurrentAmmo} ammo, {v}s -> {val}s CD.");
 			}
 		}
 		public override string ExplanationPart(StatRequest req)
@@ -30,7 +28,7 @@ namespace ZzZomboRW
 			if(req.HasThing)
 			{
 				var comp = req.Thing.TryGetComp<CompGunWithMagazines>();
-				if((comp?.Enabled ?? false) && comp.CurrentAmmo > 0)
+				if(comp?.Enabled is true && comp.CurrentAmmo > 0)
 				{
 					return "ZzZomboRW_StatPart_RangedWeapon_Cooldown".Translate();
 				}
@@ -42,14 +40,14 @@ namespace ZzZomboRW
 	{
 		public override bool IsDisabledFor(Thing thing)
 		{
-			return !(thing.TryGetComp<CompGunWithMagazines>()?.Enabled ?? false) || base.IsDisabledFor(thing);
+			return !(thing.TryGetComp<CompGunWithMagazines>()?.Enabled is true) || base.IsDisabledFor(thing);
 		}
 		public override bool ShouldShowFor(StatRequest req)
 		{
 			if(req.HasThing)
 			{
 				var comp = req.Thing.TryGetComp<CompGunWithMagazines>();
-				return comp?.Enabled ?? false;
+				return comp?.Enabled is true;
 			}
 			return base.ShouldShowFor(req);
 		}
@@ -58,7 +56,7 @@ namespace ZzZomboRW
 			if(req.HasThing)
 			{
 				var comp = req.Thing.TryGetComp<CompGunWithMagazines>();
-				if(comp?.Enabled ?? false)
+				if(comp?.Enabled is true)
 				{
 					return comp.CurrentAmmo;
 				}
@@ -70,15 +68,12 @@ namespace ZzZomboRW
 	public class CompProperties_GunWithMagazines: CompProperties
 	{
 		public bool enabled = true;
-		//private int maxAmmo = 1;
 		public int currentAmmo = -1;
-		//public float reFireDelay = 0.1f;
 		public CompProperties_GunWithMagazines()
 		{
 			this.compClass = typeof(CompGunWithMagazines);
 			Log.Message($"[ZzZomboRW.CompProperties_GunWithMagazines] Initialized:\n" +
 				$"\tCurrent ammo: {this.currentAmmo};\n" +
-				//$"\tRefire delay: {this.reFireDelay};\n" +
 				$"\tEnabled: {this.enabled}.");
 		}
 
@@ -86,21 +81,6 @@ namespace ZzZomboRW
 	public class CompGunWithMagazines: ThingComp
 	{
 		public CompProperties_GunWithMagazines Props => (CompProperties_GunWithMagazines)this.props;
-		//private StatModifier statMod;
-		//private bool setStatMod = false;
-		//private StatModifier StatMod
-		//{
-		//    get
-		//    {
-		//        if (!this.setStatMod)
-		//        {
-		//            var request = StatRequest.For(this.parent);
-		//            this.statMod = request.StatBases.Find((a) => a.stat == StatDefOf.RangedWeapon_Cooldown);
-		//            this.setStatMod = true;
-		//        }
-		//        return this.statMod;
-		//    }
-		//}
 		public bool Enabled => this.Props.enabled && this.MaxAmmo > 1;
 		public int MaxAmmo
 		{
@@ -115,18 +95,18 @@ namespace ZzZomboRW
 		{
 			base.Initialize(props);
 			if(this.CurrentAmmo < 0)
+			{
 				this.CurrentAmmo = this.MaxAmmo;
+			}
 			Log.Message($"[ZzZomboRW.CompGunWithMagazines] Initialized for {this.parent}:\n" +
 				$"\tCurrent ammo: {this.CurrentAmmo};\n" +
 				$"\tMax ammo: {this.MaxAmmo};\n" +
-				//$"\tRefire delay: {this.Props.reFireDelay};\n" +
 				$"\tEnabled: {this.Props.enabled}.");
 		}
 
 		public override void PostExposeData()
 		{
 			Scribe_Values.Look(ref this.Props.currentAmmo, "currentAmmo", 1, false);
-			//Scribe_Values.Look(ref this.Props.reFireDelay, "reFireDelay", 0.1f, false);
 			Scribe_Values.Look(ref this.Props.enabled, "enabled", true, false);
 		}
 	}
@@ -136,7 +116,7 @@ namespace ZzZomboRW
 	{
 		static HarmonyHelper()
 		{
-			Harmony harmony = new Harmony($"ZzZomboRW.{MOD.NAME}");
+			var harmony = new Harmony($"ZzZomboRW.{MOD.NAME}");
 			harmony.PatchAll();
 		}
 	}
@@ -149,7 +129,7 @@ namespace ZzZomboRW
 			if(__instance is Verb_Shoot verb)
 			{
 				var comp = verb.EquipmentSource?.GetComp<CompGunWithMagazines>();
-				if(__result && (comp?.Enabled ?? false))
+				if(__result && comp?.Enabled is true)
 				{
 					__result = comp.CurrentAmmo > 0;
 				}
@@ -157,13 +137,13 @@ namespace ZzZomboRW
 		}
 	}
 
-	[HarmonyPatch(typeof(Verb_Shoot), "TryCastShot")]
+	[HarmonyPatch(typeof(Verb_Shoot), nameof(Verb_Shoot.TryCastShot))]
 	public static class Verb_Shoot_TryCastShotPatch
 	{
 		private static void Postfix(ref bool __result, Verb_Shoot __instance)
 		{
 			var comp = __instance.EquipmentSource?.GetComp<CompGunWithMagazines>();
-			if(__result && (comp?.Enabled ?? false) && comp.CurrentAmmo > 0)
+			if(__result && comp?.Enabled is true && comp.CurrentAmmo > 0)
 			{
 				--comp.CurrentAmmo;
 			}
@@ -176,9 +156,8 @@ namespace ZzZomboRW
 		private static void Postfix(Verb_Shoot __instance)
 		{
 			var comp = __instance.EquipmentSource?.GetComp<CompGunWithMagazines>();
-			if((comp?.Enabled ?? false) && comp.CurrentAmmo < 1)
+			if(comp?.Enabled is true && comp.CurrentAmmo < 1)
 			{
-				//Log.Message($"{comp.parent} is reloaded ({comp.parent.GetStatValue(StatDefOf.RangedWeapon_Cooldown)}s).");
 				comp.CurrentAmmo = comp.MaxAmmo;
 			}
 		}
