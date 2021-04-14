@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Code", "Source\Code.csproj", "{D7D21B4A-1DA7-41D8-B202-C58CA8FA62AA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{70EC57B9-D44F-42B1-9AB6-7AF296AB435B} = {70EC57B9-D44F-42B1-9AB6-7AF296AB435B}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Content", "Source\Content.csproj", "{400311B4-6255-49ED-96BF-E684A99B1991}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decompiled RW v1.2", "I:\dev\RimWorld\RW\source-v1.2\Decompiled RW v1.2.csproj", "{CA27B971-6104-453D-A09F-1C5767BFEC13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework", "..\ZzZomboRW\Source\Code.csproj", "{70EC57B9-D44F-42B1-9AB6-7AF296AB435B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D7D21B4A-1DA7-41D8-B202-C58CA8FA62AA}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{D7D21B4A-1DA7-41D8-B202-C58CA8FA62AA}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{D7D21B4A-1DA7-41D8-B202-C58CA8FA62AA}.Debug|x86.ActiveCfg = Release|Any CPU
+		{D7D21B4A-1DA7-41D8-B202-C58CA8FA62AA}.Debug|x86.Build.0 = Release|Any CPU
+		{D7D21B4A-1DA7-41D8-B202-C58CA8FA62AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7D21B4A-1DA7-41D8-B202-C58CA8FA62AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7D21B4A-1DA7-41D8-B202-C58CA8FA62AA}.Release|x86.ActiveCfg = Release|Any CPU
+		{D7D21B4A-1DA7-41D8-B202-C58CA8FA62AA}.Release|x86.Build.0 = Release|Any CPU
+		{400311B4-6255-49ED-96BF-E684A99B1991}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{400311B4-6255-49ED-96BF-E684A99B1991}.Debug|x86.ActiveCfg = Debug|x86
+		{400311B4-6255-49ED-96BF-E684A99B1991}.Release|Any CPU.ActiveCfg = Debug|x86
+		{400311B4-6255-49ED-96BF-E684A99B1991}.Release|x86.ActiveCfg = Debug|x86
+		{CA27B971-6104-453D-A09F-1C5767BFEC13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA27B971-6104-453D-A09F-1C5767BFEC13}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CA27B971-6104-453D-A09F-1C5767BFEC13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA27B971-6104-453D-A09F-1C5767BFEC13}.Release|x86.ActiveCfg = Release|Any CPU
+		{70EC57B9-D44F-42B1-9AB6-7AF296AB435B}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{70EC57B9-D44F-42B1-9AB6-7AF296AB435B}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{70EC57B9-D44F-42B1-9AB6-7AF296AB435B}.Debug|x86.ActiveCfg = Release|Any CPU
+		{70EC57B9-D44F-42B1-9AB6-7AF296AB435B}.Debug|x86.Build.0 = Release|Any CPU
+		{70EC57B9-D44F-42B1-9AB6-7AF296AB435B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70EC57B9-D44F-42B1-9AB6-7AF296AB435B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70EC57B9-D44F-42B1-9AB6-7AF296AB435B}.Release|x86.ActiveCfg = Release|Any CPU
+		{70EC57B9-D44F-42B1-9AB6-7AF296AB435B}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {28CF9A73-5333-4EB3-BFCC-3FBEDDA19200}
+	EndGlobalSection
+EndGlobal

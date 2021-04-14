@@ -1,14 +1,14 @@
-﻿using System.Reflection;
+using System.Reflection;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Gun Magazines")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("RimWorld modification assembly")]
+[assembly: AssemblyDescription("Custom mod assembly for RimWorld")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ZzZomboRW")]
+[assembly: AssemblyCompany("ZzZombo")]
+[assembly: AssemblyProduct("ZzZombo-RW")]
 [assembly: AssemblyCopyright("Copyright © ZzZombo 2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
