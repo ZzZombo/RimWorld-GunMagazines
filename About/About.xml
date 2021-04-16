@@ -21,6 +21,9 @@
 	<!-- <incompatibleWith>
 		<li>author.modID</li>
 	</incompatibleWith> -->
+	<!-- <loadBefore>
+		<li>author.modID</li>
+	</loadBefore> -->
 	<loadAfter>
 		<li>Ludeon.RimWorld</li>
 		<li>ZzZombo.Framework</li>

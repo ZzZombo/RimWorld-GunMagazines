@@ -18,6 +18,9 @@
 		<PackageProjectUrl>https://github.com/ZzZombo/RimWorld-GunMagazines</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/ZzZombo/RimWorld-GunMagazines.git</RepositoryUrl>
 		<RepositoryType>Git</RepositoryType>
+		<Authors>ZzZombo</Authors>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+		<PackageId>Gun Magazines</PackageId>
 	</PropertyGroup>
 	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
 		<ErrorReport>prompt</ErrorReport>
@@ -25,6 +28,12 @@
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<DebugSymbols>false</DebugSymbols>
 	</PropertyGroup>
+	<ItemGroup>
+		<None Include="..\LICENSE">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="Krafs.Rimworld.Ref" Version="1.2.2900" GeneratePathProperty="true" />
 		<PackageReference Include="Lib.Harmony" Version="2.0.4" ExcludeAssets="runtime" />
@@ -34,7 +43,7 @@
 	</ItemGroup>
 	<ItemGroup>
 		<Reference Include="ZzZomboRW">
-			<HintPath>..\..\ZzZomboRW\v1.x\Assemblies\ZzZomboRW.dll</HintPath>
+			<HintPath>..\..\ZzZomboRW\v1.x\Assemblies\Framework.dll</HintPath>
 			<Private>false</Private>
 		</Reference>
 	</ItemGroup>
